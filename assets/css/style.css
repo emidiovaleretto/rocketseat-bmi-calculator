@@ -13,14 +13,41 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   color: #0c3440;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 
   background-color: #040924;
 }
 
-main {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+.top-bar {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 3.2rem;
+
+  border-radius: 6px 6px 0 0;
+  background-color: #025e7c;
+}
+
+.top-bar span {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.top-bar span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.top-bar span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.top-bar span:nth-child(3) {
+  background-color: #27c93f;
 }
 
 .container,
@@ -30,10 +57,11 @@ form {
 }
 
 .container {
+  width: 42.8rem;
   gap: 3.2rem;
   padding: 6.4rem;
   background-color: #fff;
-  border-radius: 0.6rem;
+  border-radius: 0 0 0.6rem 0.6rem;
 }
 
 .container h1 {
