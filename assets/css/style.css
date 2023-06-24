@@ -77,6 +77,12 @@ button {
   line-height: 2rem;
   color: #fff;
   background-color: #02799d;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #025e7c;
+  cursor: pointer;
 }
 
 button::after {
@@ -87,6 +93,19 @@ button::after {
   background: url("../img/arrow-right.svg") no-repeat center center;
   background-size: contain;
   margin-left: 0.8rem;
-  top: 0.3rem;
+  top: 0.2rem;
   position: relative;
+}
+
+button:hover::after {
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(0.4rem);
+  }
 }
