@@ -1,0 +1,92 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #0c3440;
+
+  background-color: #040924;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container,
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  gap: 3.2rem;
+  padding: 6.4rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+}
+
+.container h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  margin-bottom: 0.8rem;
+}
+
+input {
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(73, 80, 87, 0.3);
+  background: #dce2e9;
+
+  color: #212529;
+  text-align: center;
+}
+
+input:focus {
+  outline: 1px solid #02799d;
+}
+
+input:focus::placeholder {
+  visibility: hidden;
+}
+
+button {
+  padding: 1.6rem;
+  margin-top: 2rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #fff;
+  background-color: #02799d;
+}
+
+button::after {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("../img/arrow-right.svg") no-repeat center center;
+  background-size: contain;
+  margin-left: 0.8rem;
+  top: 0.3rem;
+  position: relative;
+}
