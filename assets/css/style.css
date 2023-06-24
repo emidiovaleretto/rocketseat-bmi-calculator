@@ -20,6 +20,34 @@ body {
   background-color: #040924;
 }
 
+.error-message {
+  text-align: center;
+  width: 100%;
+  background-color: #f03e3e;
+  font-weight: 700;
+  color: #fff;
+  padding: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: error 0.6s ease-in-out;
+}
+
+@keyframes error {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .top-bar {
   display: flex;
   align-items: center;

@@ -12,24 +12,28 @@
 </head>
 
 <body>
+  <main>
+    <div class="error-message">
+      <p>Enter numbers only</p>
+    </div>
+    <div class="top-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form action="/">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" name="weight" id="weight">
+        <label for="height">Height (m)</label>
+        <input type="number" name="height" id="height" placeholder="160">
+        <button type="submit" id="submit">Calculate BMI</button>
+      </form>
+    </div>
+  </main>
+
   <script src="./assets/js/script.js"></script>
 </body>
-<main>
-  <div class="top-bar">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="container">
-    <h1>BMI Calculator</h1>
-    <form action="/">
-      <label for="weight">Weight (kg)</label>
-      <input type="number" name="weight" id="weight">
-      <label for="height">Height (m)</label>
-      <input type="number" name="height" id="height" placeholder="160">
-      <button type="submit" id="submit">Calculate BMI</button>
-    </form>
-  </div>
-</main>
 
 </html>
