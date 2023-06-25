@@ -20,6 +20,10 @@ body {
   background-color: #040924;
 }
 
+.hidden {
+  display: none;
+}
+
 .error-message {
   text-align: center;
   width: 100%;
