@@ -5,6 +5,11 @@ const icon = document.querySelector(".icon")
 
 button.addEventListener("click", handleClick)
 icon.addEventListener("click", handleModalClose)
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    handleModalClose()
+  }
+})
 
 const calculateBMI = (weight, height) => {
   return ((weight / (height * height)) * 10000).toFixed(1)
@@ -31,11 +36,6 @@ function handleClick(event) {
 
 function handleErrorMessage() {
   errorToast.classList.remove("hidden")
-  errorToast.querySelector("p").innerText = "Please fill in all fields"
-
-  setTimeout(() => {
-    errorToast.style.opacity = 0
-  }, 5000)
 }
 
 function handleModalClose() {

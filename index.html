@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   <title>BMI Calculator</title>
@@ -18,7 +18,10 @@
 <body>
   <main>
     <div class="error-message hidden">
-      <p></p>
+      <p>
+        <i class="fa-solid fa-circle-exclamation"></i> Please fill in all fields
+      </p>
+      <div class="error-message__progress"></div>
     </div>
     <div class="top-bar">
       <span></span>
@@ -29,7 +32,7 @@
       <h1>BMI Calculator</h1>
       <form action="/">
         <label for="weight">Weight (kg)</label>
-        <input type="number" name="weight" id="weight">
+        <input type="number" name="weight" id="weight" placeholder="60">
         <label for="height">Height (m)</label>
         <input type="number" name="height" id="height" placeholder="160">
         <button type="submit" id="submit">Calculate BMI</button>
@@ -40,7 +43,7 @@
   <section>
     <div class="modal hidden">
       <div class="modal-content">
-        <h2></h2>
+        <h2>Your BMI is</h2>
         <i class="icon fa-solid fa-xmark"></i>
       </div>
     </div>
