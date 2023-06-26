@@ -36,6 +36,10 @@ function handleClick(event) {
 
 function handleErrorMessage() {
   errorToast.classList.remove("hidden")
+
+  setTimeout(() => {
+    errorToast.classList.add("hidden")
+  }, 3000)
 }
 
 function handleModalClose() {
