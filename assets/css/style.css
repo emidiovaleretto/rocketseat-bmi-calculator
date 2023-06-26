@@ -11,7 +11,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
   color: #0c3440;
   display: grid;
   place-items: center;
@@ -19,6 +18,12 @@ body {
   overflow: hidden;
 
   background-color: #040924;
+}
+
+body,
+input,
+button {
+  font-size: 1.6rem;
 }
 
 .error-message {
@@ -149,7 +154,7 @@ input {
 }
 
 input:focus {
-  outline: 1px solid #02799d;
+  outline: 2px solid #02799d;
 }
 
 input:focus::placeholder {
