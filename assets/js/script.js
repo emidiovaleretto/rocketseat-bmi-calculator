@@ -1,3 +1,5 @@
+const inputWeight = document.querySelector("#weight")
+const inputHeight = document.querySelector("#height")
 const button = document.querySelector("#submit")
 const errorToast = document.querySelector(".error-message")
 const modal = document.querySelector(".modal")
@@ -8,6 +10,9 @@ icon.addEventListener("click", handleModalClose)
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     handleModalClose()
+    inputWeight.focus()
+    inputWeight.value = ""
+    inputHeight.value = ""
   }
 })
 
@@ -23,13 +28,13 @@ const displayResult = (bmi) => {
 function handleClick(event) {
   event.preventDefault()
 
-  const inputWeight = document.querySelector("#weight").value
-  const inputHeight = document.querySelector("#height").value
+  const weight = inputWeight.value
+  const height = inputHeight.value
 
-  if (inputWeight === "" || inputHeight === "") {
+  if (weight === "" || height === "") {
     handleErrorMessage()
   } else {
-    const bmi = calculateBMI(Number(inputWeight), Number(inputHeight))
+    const bmi = calculateBMI(Number(weight), Number(height))
     displayResult(bmi)
   }
 }
