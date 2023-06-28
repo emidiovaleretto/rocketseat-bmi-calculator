@@ -173,6 +173,10 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
+button:focus {
+  outline: 2px solid #003f52;
+}
+
 button:hover {
   background-color: #025e7c;
   cursor: pointer;
