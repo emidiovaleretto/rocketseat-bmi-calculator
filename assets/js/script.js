@@ -1,4 +1,4 @@
-import { Modal } from "../../modules/modal.js"
+import { calculateBMI, displayResult } from "../../modules/utils.js"
 import { Error } from "../../modules/error.js"
 
 export const inputWeight = document.querySelector("#weight")
@@ -17,13 +17,4 @@ button.onclick = (event) => {
     const bmi = calculateBMI(Number(weight), Number(height))
     displayResult(bmi)
   }
-}
-
-const calculateBMI = (weight, height) => {
-  return ((weight / (height * height)) * 10000).toFixed(1)
-}
-
-const displayResult = (bmi) => {
-  Modal.open()
-  Modal.text.innerText = `Your BMI is ${bmi} kg/m2.`
 }
